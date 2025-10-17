@@ -11,7 +11,7 @@ file.close()
 
 count = 1
 for name in names:
-    name = name.strip()  # remove spaces and newlines
+    name = name.strip()
 
     # background
     img = Image.new("RGB", (800, 400), color="lightblue")
@@ -20,7 +20,7 @@ for name in names:
     # text
     font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial Unicode.ttf", 60)
 
-    # first line: חג שמח
+    # first line:
     line1 = "חג שמח"
     bbox1 = draw.textbbox((0, 0), line1, font=font)
     w1 = bbox1[2] - bbox1[0]
@@ -28,7 +28,7 @@ for name in names:
     y1 = (img.height / 2) - 80
     draw.text((x1, y1), line1, fill="darkblue", font=font)
 
-    # second line: ל + name
+    # second line:
     line2 = "ל" + name
     bbox2 = draw.textbbox((0, 0), line2, font=font)
     w2 = bbox2[2] - bbox2[0]
